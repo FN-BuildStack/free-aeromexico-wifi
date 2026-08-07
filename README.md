@@ -31,7 +31,7 @@ A continuación, se detalla la arquitectura técnica de esta vulnerabilidad y lo
 ### Procedimientos de Implementación
 
 - Configuración en Android (`docs/tutoriales/01-android.md`)
-- Configuración en iOS (iPhone/iPad) (`docs/tutoriales/02-ios.md`)
+- Configuración en iOS (`docs/tutoriales/02-ios.md`)
 
 ## Nota Legal y Descargo de Responsabilidad
 

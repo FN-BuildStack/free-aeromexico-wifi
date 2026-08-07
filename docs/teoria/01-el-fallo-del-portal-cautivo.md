@@ -12,14 +12,14 @@ Los portales cautivos son mecanismos de control de acceso a nivel de red diseña
 
 Un sistema de portal cautivo convencional involucra la interacción de diversos componentes de red en el modelo OSI:
 
-1. **Punto de Acceso (AP) y Controlador WLAN (Capa 2):** Gestiona la asociación 802.11 y reenvía las tramas del cliente.
-2. **Servidor DHCP (Capa 3 / Capa 7):** Asigna direcciones IP dinámicas y mantiene una tabla de concesiones (leases) vinculadas a la dirección MAC del cliente.
-3. **Servidor de Autenticación / Portal Cautivo (Capa 7):** Intercepta el tráfico HTTP/HTTPS no autorizado mediante redirección DNS o respuestas HTTP 302, sirviendo la interfaz web de acceso.
-4. **Servidor de Acceso a la Red (NAS) / Cortafuegos (Capa 3/4):** Aplica las Listas de Control de Acceso (ACL) que permiten o bloquean el reenvío de paquetes hacia la red de área amplia (WAN).
+1. **Punto de Acceso y Controlador WLAN:** Gestiona la asociación 802.11 y reenvía las tramas del cliente.
+2. **Servidor DHCP:** Asigna direcciones IP dinámicas y mantiene una tabla de concesiones (leases) vinculadas a la dirección MAC del cliente.
+3. **Servidor de Autenticación / Portal Cautivo:** Intercepta el tráfico HTTP/HTTPS no autorizado mediante redirección DNS o respuestas HTTP 302, sirviendo la interfaz web de acceso.
+4. **Servidor de Acceso a la Red (NAS) / Cortafuegos:** Aplica las Listas de Control de Acceso (ACL) que permiten o bloquean el reenvío de paquetes hacia la red de área amplia (WAN).
 
 ## El Problema de la Identidad basada en la Capa de Enlace
 
-El modelo de referencia OSI define la Capa de Enlace de Datos (Capa 2) como el nivel responsable de la entrega de tramas entre nodos dentro del mismo segmento de red local. Históricamente, las arquitecturas de portal cautivo empleaban la dirección MAC presente en la cabecera 802.11 como un identificador de sesión estático.
+El modelo de referencia OSI define la capa de enlace de datos como el nivel responsable de la entrega de tramas entre nodos dentro del mismo segmento de red local. Históricamente, las arquitecturas de portal cautivo empleaban la dirección MAC presente en la cabecera 802.11 como un identificador de sesión estático.
 
 El flujo de administración de estado opera habitualmente bajo la siguiente lógica:
 
